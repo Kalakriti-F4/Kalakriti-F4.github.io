@@ -1,0 +1,31 @@
+[
+Item(title='Ganga River', seller='TT', sellerEmail='gmail@tt.com', sellerPhone='011 2553 2553', price=50, details="TT captured this pic. He doesn't need money, money needs him. All money from selling these will go to a charity that protects squirrels."),
+Item(title='Ancient Cake', seller='EOE Students', sellerEmail='₹100@venture.com', sellerPhone='6090420069', price=700, details="This is the easiest idea for EOE students; to make eatables! And it still works!! I think students are really desperate for food here."),
+Item(title='IIT Mandi Snow', seller='Me', sellerEmail='me@memail.com', sellerPhone='+9199256xxxx0', price=37, details="I'd rather be a bird than a fish."),
+Item(title='Naruto Matka', seller='Sasuke Matke Wale Pvt. Ltd.', sellerEmail='pottery@india.co.jp', sellerPhone='+81 3216549870', price=522, details="イルカ先生に手を出すな。殺すぞ。"),
+Item(title='Bamboo Cutlery', seller='Temsuyanger Longkumar', sellerEmail='kumarlooong@hotmail.com', sellerPhone='Not Available', price=500, details="This artist is from Nagalad. This is a very good buy. Please take it."),
+Item(title='Banana Leaf', seller='Baba', sellerEmail='babaiseverywhere@gmail.com', sellerPhone='0755-256559', price=201, details='Very good and natural product. Eco friendly!'),
+Item(title='Madhubani', seller='Bulbasaur', sellerEmail='Bulbasaur@tt.com', sellerPhone='011 2553 2553', price=6000, details="Bulbasaur made this to impress his friend Charmander but seems like he doesn't like it. Now, Bulbasaur wants to sell it to get a fire extinguisher. He might be planning something but we're not not sure yet."),
+Item(title='Worli', seller='Bulbasaur', sellerEmail='Bulbasaur@tt.com', sellerPhone='011 2553 2553', price=3000, details="Bulbasaur made this to impress his friend Charmander but seems like he doesn't like it. Now, Bulbasaur wants to sell it to get a fire extinguisher. He might be planning something but we're not not sure yet."),
+Item(title='Kamand valley', seller='TT', sellerEmail='gmail@tt.com', sellerPhone='011 2553 2553', price=2, details="TT captured this pic. He doesn't need money, money needs him. All money from selling these will go to a charity that protects squirrels."),
+Item(title='Buddha', seller='Bulbasaur', sellerEmail='Bulbasaur@tt.com', sellerPhone='011 2553 2553', price=5000, details="Bulbasaur made this to impress his friend Charmander but seems like he doesn't like it. Now, Bulbasaur wants to sell it to get a fire extinguisher. He might be planning something but we're not not sure yet."),
+Item(title='Birds', seller='Bulbasaur', sellerEmail='Bulbasaur@tt.com', sellerPhone='011 2553 2553', price=900, details="Bulbasaur made this to impress his friend Charmander but seems like he doesn't like it. Now, Bulbasaur wants to sell it to get a fire extinguisher. He might be planning something but we're not not sure yet."),
+Item(title='Miniature', seller='Bulbasaur', sellerEmail='Bulbasaur@tt.com', sellerPhone='011 2553 2553', price=2000, details="Bulbasaur made this to impress his friend Charmander but seems like he doesn't like it. Now, Bulbasaur wants to sell it to get a fire extinguisher. He might be planning something but we're not not sure yet."),
+Item(title='Block print', seller='Bulbasaur', sellerEmail='Bulbasaur@tt.com', sellerPhone='011 2553 2553', price=6000, details="Bulbasaur made this to impress his friend Charmander but seems like he doesn't like it. Now, Bulbasaur wants to sell it to get a fire extinguisher. He might be planning something but we're not not sure yet.")
+]
+
+[
+Itembox(itemId=1, filterName='photography'),
+Itembox(itemId=2, filterName='home decor'),
+Itembox(itemId=3, filterName='office decor'),
+Itembox(itemId=4, filterName='furnishing'),
+Itembox(itemId=5, filterName='furnishing'),
+Itembox(itemId=6, filterName='home decor'),
+Itembox(itemId=7, filterName='painting'),
+Itembox(itemId=8, filterName='painting'),
+Itembox(itemId=9, filterName='photography'),
+Itembox(itemId=10, filterName='print'),
+Itembox(itemId=11, filterName='print'),
+Itembox(itemId=12, filterName='painting'),
+Itembox(itemId=13, filterName='print')
+]

@@ -1,0 +1,76 @@
+{% extends "base.html" %}
+{% block content %}
+  <main id="main">
+
+    <!-- ======= Breadcrumbs ======= -->
+    <section id="breadcrumbs" class="breadcrumbs">
+      <div class="container">
+
+        <div class="d-flex justify-content-between align-items-center">
+          <h2>{{ section.capitalize() }}</h2>
+          <ol>
+            <li><a href="{{ url_for('index') }}">Home</a></li>
+            <li>{{ section.capitalize() }}</li>
+          </ol>
+        </div>
+
+      </div>
+    </section><!-- End Breadcrumbs -->
+
+    <!-- ======= Portfolio Section ======= -->
+    <section id="portfolio" class="portfolio">
+      <div class="container">
+
+        <div class="row">
+          <div class="col-lg-12 d-flex justify-content-center">
+            <ul id="portfolio-flters">
+              {% if filter is none %}
+                <li data-filter="*" class="filter-active">All</li>
+              {% else %}
+                <li data-filter="*">All</li>
+              {% endif %}
+              {% for ele in allFilters %}
+                {% set words = ele.split(' ') %}
+                {% if ele == filter %}
+                <li data-filter=".filter-{{ words|join('-') }}" class="filter-active">{{ ele }}</li>
+                {% else %}
+                <li data-filter=".filter-{{ words|join('-') }}">{{ ele }}</li>
+                {% endif %}
+              {% endfor %}
+            </ul>
+          </div>
+        </div>
+
+        <div class="row portfolio-container">
+
+          {% for item in items %}
+          {% set words = item.filter.split(' ') %}
+          <div class="col-lg-3 col-md-6 portfolio-item filter-{{ words|join('-') }}" id="{{ item.id }}">
+            <div class="portfolio-noname">
+              <div style="position: relative;">
+                <a href="{{ url_for('item_details', id=item.id, section=section) }}">
+                  <img src="{{ url_for('static', filename='img/items/' + item.id|string + '.jpg') }}" class="img-fluid k-pimg">
+                </a>
+                <div class="portfolio-info">
+                  <a href="{{ url_for('static', filename='img/items/' + item.id|string + '.jpg') }}" data-gall="portfolioGallery" class="venobox preview-link"><i class="bx bx-zoom-in"></i></a>
+                  <a href="" class="details-link" title="Share"><i class="bx bx-share"></i></a>
+                  <a href="" class="wish-link" title="Save"><i class='bx bx-list-plus'></i></a>
+                </div>
+              </div>
+              <a href="{{ url_for('item_details', id=item.id, section=section) }}">
+                <div class="portfolio-infomore">
+                  <h5>{{ item.title }}</h5>
+                  <p class="k-price">Rs. {{ item.price }}</p>
+                </div>
+              </a>
+            </div>
+          </div>
+          {% endfor %}
+
+        </div>
+
+      </div>
+    </section><!-- End Portfolio Section -->
+
+  </main><!-- End #main -->
+{% endblock %}

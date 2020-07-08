@@ -1,0 +1,52 @@
+{% extends "base.html" %}
+{% block content %}
+  <main id="main">
+
+    <!-- ======= Breadcrumbs ======= -->
+    <section id="breadcrumbs" class="breadcrumbs">
+      <div class="container">
+
+        <div class="d-flex justify-content-between align-items-center">
+          <h2>{{ item.title.capitalize() }}</h2>
+          <ol>
+            <li><a href="{{ url_for('index') }}">Home</a></li>
+            <li><a href="{{ url_for('products', section=section) }}">{{ section.capitalize() }}</a></li>
+            <li>{{ item.title.capitalize() }}</li>
+          </ol>
+        </div>
+
+      </div>
+    </section><!-- End Breadcrumbs -->
+
+    <!-- ======= Portfolio Details Section ======= -->
+    <section id="portfolio-details" class="portfolio-details">
+      <div class="container">
+        <div class="portfolio-details-container">
+
+          <div class="owl-carousel portfolio-details-carousel">
+            {% for image in images %}
+            <img src="{{ url_for('static', filename='img/items/' + image) }}" class="img-fluid" style="max-height: 750px; overflow: hidden;">
+            {% endfor %}
+          </div>
+
+          <div class="portfolio-info">
+            <h3>{{ item.title.capitalize() }}</h3>
+            <ul>
+              <li><strong>Category</strong>: {{ section.capitalize() }}</li>
+              <li><strong>Price</strong>: Rs. {{ item.price }}</li>
+              <li><strong>Seller</strong>: {{ item.seller }}</li>
+            </ul>
+          </div>
+
+        </div>
+
+        <div class="portfolio-description">
+          <h2>{{ item.title.capitalize() }}</h2>
+          <p>{{ item.details }}</p>
+        </div>
+
+      </div>
+    </section><!-- End Portfolio Details Section -->
+
+  </main><!-- End #main -->
+{% endblock %}
