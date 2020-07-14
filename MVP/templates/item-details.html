@@ -23,7 +23,7 @@
       <div class="container">
         <div class="portfolio-details-container">
 
-          <div class="owl-carousel portfolio-details-carousel">
+          <div class="owl-carousel portfolio-details-carousel" style="width: 400px;">
             {% for image in images %}
             <img src="{{ url_for('static', filename='img/items/' + image) }}" class="img-fluid" style="max-height: 750px; overflow: hidden;">
             {% endfor %}
@@ -36,6 +36,9 @@
               <li><strong>Price</strong>: Rs. {{ item.price }}</li>
               <li><strong>Seller</strong>: {{ item.seller }}</li>
             </ul>
+            <hr />
+            <button type="button" id="cart" class="btn btn-outline-dark">Add to Cart</button>
+            <button type="button" class="btn btn-outline-dark">Wishlist</button>
           </div>
 
         </div>

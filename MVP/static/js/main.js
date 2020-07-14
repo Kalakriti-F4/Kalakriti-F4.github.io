@@ -53,6 +53,20 @@
     }
   });
 
+  $("#cart").click(function() {
+    $.ajax({
+      url: "/addcart",
+      type: "get",
+      data: {},
+      success: function(response) {
+        $("#lblCartCount").html(response);
+      },
+      error: function(xhr) {
+        //Do Something to handle error
+      }
+    });
+  });
+
   // Mobile Navigation
   if ($('.nav-menu').length) {
     var $mobile_nav = $('.nav-menu').clone().prop({

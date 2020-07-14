@@ -5,10 +5,13 @@ from flask import Flask, render_template, request, session
 from flask_sqlalchemy import SQLAlchemy
 
 app = Flask(__name__)
+
+db_path = os.path.join(os.path.dirname(__file__), 'app.db')
+db_uri = 'sqlite:///{}'.format(db_path)
+app.config['SQLALCHEMY_DATABASE_URI'] = db_uri
 db = SQLAlchemy(app)
 
-app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:////tmp/hs510.db'
-app.secret_key = b'\xcb\x86j\xedW\xb2\x85#\xe0\x00\xc6\x8dr\xe1\x82\x0b'
+app.secret_key = os.urandom(24)
 
 @app.route('/')
 def index():
@@ -50,6 +53,14 @@ def item_details(id):
         'images': images
     }
     return render_template('item-details.html', **content)
+
+@app.route('/addcart')
+def add_cart():
+    if session.get('cart'):
+        session['cart'] += 1
+    else:
+        session['cart'] = 1
+    return str(session['cart'])
 
 class Item(db.Model):
     id = db.Column(db.Integer, primary_key=True)
